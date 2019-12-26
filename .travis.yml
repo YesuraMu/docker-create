@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t YesuraMu/docker-create -f Dockerfile.dev .
+  - docker build -t yesuramu/docker-create -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true YesuraMu/docker-create npm run test -- --coverage
+  - docker run -e CI=true yesuramu/docker-create npm run test -- --coverage
